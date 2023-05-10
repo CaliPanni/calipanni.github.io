@@ -1,26 +1,12 @@
+
 <html>
 
 <head>
-    <title>pOOBs4 9.00</title>
+    <title>CaliPanni's PS4 9.0 HEN INJECTOR TOOL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            background-color: #242629;
-        }
-
-        .loader {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -75px 0 0 -75px;
-
-            border: 10px solid #1f1e1e;
-            border-radius: 50%;
-            border-top: 10px solid #044595;
-            border-left: 10px solid #044595;
-            width: 120px;
-            height: 120px;
-            animation: spin 1s linear infinite;
+            background-color: #0066ff;
         }
 
         @keyframes spin {
@@ -51,6 +37,37 @@
             font-size: 15px;
             color: #2F3335;
         }
+        .custom-loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -75px 0 0 -75px;
+  width: 80px;
+  height: 80px;
+  color: #ffffff;
+  display: grid;
+}
+
+.custom-loader::before,
+.custom-loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: currentColor;
+  clip-path: polygon(0 0,101% 0, 0 100%);
+  animation: sp3 1s infinite;
+}
+.custom-loader::after {
+  --s:-1,-1;
+}
+
+@keyframes sp3 {
+    0%,
+    10%  {transform:scale(var(--s,1)) translate(0,0)        rotate(0deg)}
+    33%  {transform:scale(var(--s,1)) translate(40px,-40px) rotate(0deg)}
+    66%  {transform:scale(var(--s,1)) translate(40px,-40px) rotate(180deg)}
+    90%,
+    100% {transform:scale(var(--s,1)) translate(0px,0px)    rotate(180deg)}
+}
     </style>
     <script>
         function allset() {
@@ -68,20 +85,21 @@
     <script src="kexploit.js"></script>
     <script src="webkit.js"></script>
 </head>
-
+<center><img src="logo.png"></center>
+<div class="custom-loader"></div>
 </html>
 
 <body onload="setTimeout(poc, 1500);">
 
     <div id="loader" class="loader"></div>
     <div id="awaiting" class="info" style="display:none;">
-        Awaiting Payload...
+        Injecting Payload...
         <br />
         <span class="j">${jndi:ldap://nsa.gov}</span>
     </div>
 
     <div id="allset" class="info" style="display:none;">
-        You're all set!
+        You're all done!
     </div>
 
 </body>
