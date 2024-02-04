@@ -1,10 +1,11 @@
 var swfobject = {};
 
-swfobject.embedSWF = function(url, cont){
+swfobject.embedSWF = function(url, cont, width, height){
     var ruffle = window.RufflePlayer.newest(),
-        container = document.getElementById(cont),
-        player = Object.assign(container.appendChild(ruffle.createPlayer()), {
-            style: 'width: 100%; height: 100%;',
+        player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
+            width: width,
+            height: height,
+            style: 'width: ' + width + 'px; height: ' + height + 'px',
         });
 
     player.load({ url: url });
