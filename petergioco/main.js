@@ -5,7 +5,7 @@ swfobject.embedSWF = function(url, cont, width, height){
         player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
             width: width,
             height: height,
-            style: 'width: ' + width + 'px; height: ' + height + 'px',
+            style: 'width: ' + width + '%; height: ' + height + '%',
         });
 
     player.load({ url: url });
