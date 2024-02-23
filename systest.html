@@ -1,6 +1,27 @@
 <html>
-    <title>system test</title>
-    <a href="intent://com.miui.cit/#Intent;scheme=android-app;end">Open CIT</a>
+    <title>Android Web AppRUnner (AWAP)</title>
+    <form id="urlForm">
+        <label for="url">Process/app to run:</label><br>
+        <input type="text" id="url" name="url" placeholder="com.android.setting" required><br>
+        <button type="submit">Run</button>
+    </form>
+
+    <script>
+        document.getElementById('urlForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previeni il comportamento di default del form
+
+            var urlInput = document.getElementById('url').value;
+            var intentUrl = "intent://" + urlInput + "/#Intent;scheme=android-app;end";
+
+            // Apri l'URL con Intent se l'utente sta navigando da un dispositivo Android
+            if (/Android/i.test(navigator.userAgent)) {
+                window.location.href = intentUrl;
+            } else {
+                // Apri l'URL originale in una nuova scheda se l'utente sta navigando da un dispositivo diverso da Android
+                window.open(urlInput, '_blank');
+            }
+        });
+    </script>
     <br>
     <a href="intent://com.android.settings/#Intent;scheme=android-app;end">Open Settings</a>
    <br>
