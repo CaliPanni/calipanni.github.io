@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTWC</title>
+</head>
+<body>
+
+  <h1>Number To WaChat</h1>
+
+  <form id="whatsappForm">
+    <label for="phoneNumber">Inserisci il numero:<label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+
+    <label for="country">Seleziona il prefisso:</label>
+    <select id="country" name="country">
+      <option value="39">Italia (39)</option>
+      <option value="93">Afghanistan (93)</option>
+      <option value="355">Albania (355)</option>
+      <option value="213">Algeria (213)</option>
+      <option value="376">Andorra (376)</option>
+      <option value="244">Angola (244)</option>
+      <!-- Aggiungi gli altri paesi con i relativi prefissi qui -->
+      <option value="44">Regno Unito (44)</option>
+      <option value="1">Stati Uniti (1)</option>
+      <option value="598">Uruguay (598)</option>
+      <option value="998">Uzbekistan (998)</option>
+      <option value="678">Vanuatu (678)</option>
+      <option value="58">Venezuela (58)</option>
+      <option value="84">Vietnam (84)</option>
+      <option value="967">Yemen (967)</option>
+      <option value="260">Zambia (260)</option>
+      <option value="263">Zimbabwe (263)</option>
+    </select>
+    <button type="button" onclick="generateWhatsAppLink()">Apri Chat WhatsApp</button>
+  </form>
+
+  <script>
+    function generateWhatsAppLink() {
+      const phoneNumber = document.getElementById("phoneNumber").value;
+      const countryPrefix = document.getElementById("country").value;
+      const whatsappLink = `https://wa.me/${countryPrefix}${phoneNumber.replace(/\s/g, '')}`;
+      window.open(whatsappLink);
+    }
+  </script>
+
+</body>
+</html>
