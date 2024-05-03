@@ -16,6 +16,36 @@
             </style>
     </head>
     <body>
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("may 10, 2024 16:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "g " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">Android Mod</a>
@@ -49,11 +79,41 @@
             <div class="alert alert-warning" role="alert">
               Ciao! questa sezione e' riservata agli utenti che desiderano pagare in contanti. Se vuoi pagare con carta, clicca <a href="https://www.buymeacoffee.com/androidmod/extras">qui</a>.
             </div>
+                <center>
+                  <h1>Modding console:</h1>
+                </center>
+                <div class="card" style="width: 18rem;">
+                <img src="images/playst4.png" class="card-img-top" alt="Samsung galaxy j3 2016">
+                <div class="card-body">
+                  <h4 class="card-title">Servizio modding ps4</h4>
+                  <h5 class="card-title">5/15€</h5>
+                  <p class="card-text">Servizio modding ps4 con GoldHEN con sistema fino a 11.00</p>
+                  <a href="" class="btn btn-primary disabled">Richiedi un preventivo</a>
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  Disponibile fra <p id="demo"></p>
+                </div>
+              </div>
+              <br>
+                              <div class="card" style="width: 18rem;">
+                <img src="images/back.png" class="card-img-top" alt="Samsung galaxy j3 2016">
+                <div class="card-body">
+                  <h4 class="card-title">Servizio di downgrade (revert) firmware ps4 + GoldHEN</h4>
+                  <h5 class="card-title">50/100€</h5>
+                  <p class="card-text">Servizio di revert firmware con modifica hardware con chip esp32 e modifica software con GoldHEN.</p>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxC11NUiCgbC6xiYxCD1QfZJdlTKVeMA8WbGFlBbs5BRwyOQ/viewform" class="btn btn-primary disabled">Richiedi un preventivo</a>
+                </div>
+                <div class="alert alert-danger" role="alert">
+                  Servizio non ancora disponibile!
+                </div>
+              </div>
+              <br>
+              <h1>Telefonia usata:</h1>
             <div class="card" style="width: 18rem;">
                 <img src="images/huawei.jpg" class="card-img-top" alt="Huawei p8 lite 2015 (ale l21)">
                 <div class="card-body">
                   <h4 class="card-title">Huawei p8 lite 2015 (ale l21)</h4>
-                  <h5 class="card-title"><s>22.50€</s> 15€ 25% off!</h5>
+                  <h5 class="card-title">20€</h5>
                   <p class="card-text">Telefono perfettamente funzionante ma con schermo danneggiato e pulsante accensione danneggiato, modificato con la Twrp e bootloader sbloccato.</p>
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxC11NUiCgbC6xiYxCD1QfZJdlTKVeMA8WbGFlBbs5BRwyOQ/viewform" class="btn btn-primary">Contattaci</a>
                 </div>
@@ -68,15 +128,17 @@
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxC11NUiCgbC6xiYxCD1QfZJdlTKVeMA8WbGFlBbs5BRwyOQ/viewform" class="btn btn-primary disabled">Contattaci</a>
                 </div>
                 <div class="alert alert-warning" role="alert">
-                  Prenotato!
+                  Disponibile fra !
                 </div>
               </div>
+          <br>
+          <h1>Accessori:</h1>
           <br>
           <div class="card" style="width: 18rem;">
             <img src="images/tagnfc.png" class="card-img-top" alt="tag nfc215">
             <div class="card-body">
               <h4 class="card-title">Tag nfc 215 bytes </h4>
-              <h5 class="card-title">0.50€ cad.</h5>
+              <h5 class="card-title">1€ cad.</h5>
               <p class="card-text">Tag nfc215 25mm.</p>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxC11NUiCgbC6xiYxCD1QfZJdlTKVeMA8WbGFlBbs5BRwyOQ/viewform" class="btn btn-primary disabled">Contattaci</a>
             </div>
