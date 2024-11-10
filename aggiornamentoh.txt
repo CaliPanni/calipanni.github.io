@@ -1,3 +1,2 @@
-2.0
+2.5
 https://github.com/CaliPanni/calipanni.github.io/raw/refs/heads/main/radioirpiniaPLAYER.apk
-bo
