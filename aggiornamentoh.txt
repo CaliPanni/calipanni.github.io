@@ -1,2 +1,3 @@
-2.5
+2.7
 https://github.com/CaliPanni/calipanni.github.io/raw/refs/heads/main/radioirpiniaPLAYER.apk
+Aggiunte icone a tema con Android 13. Da questo momento sono supportati soltanto device con android 8 e superiori.
